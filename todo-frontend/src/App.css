@@ -1,0 +1,149 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f1a;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* ===== App Container ===== */
+.app {
+  max-width: 620px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Title ===== */
+.app h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #a78bfa;
+  letter-spacing: 1px;
+}
+
+/* ===== Form ===== */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #3a3a5c;
+  background: #12122a;
+  color: #e0e0e0;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-form input:focus {
+  border-color: #a78bfa;
+}
+
+.todo-form input::placeholder {
+  color: #666;
+}
+
+.todo-form button {
+  padding: 10px 20px;
+  background: #a78bfa;
+  color: #0f0f1a;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.todo-form button:hover {
+  background: #7c3aed;
+  color: white;
+}
+
+/* ===== Empty State ===== */
+.empty {
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* ===== Todo Item ===== */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #12122a;
+  border-radius: 10px;
+  border: 1px solid #2a2a4a;
+  transition: border-color 0.2s;
+}
+
+.todo-item:hover {
+  border-color: #a78bfa;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #a78bfa;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+}
+
+.todo-text strong {
+  display: block;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.todo-text span {
+  font-size: 13px;
+  color: #888;
+}
+
+.todo-item.done .todo-text strong {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.todo-item.done .todo-text span {
+  color: #444;
+}
+
+.delete-btn {
+  padding: 6px 14px;
+  background: transparent;
+  color: #f87171;
+  border: 1px solid #f87171;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #f87171;
+  color: white;
+}
